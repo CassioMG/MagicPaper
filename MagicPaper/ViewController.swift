@@ -12,6 +12,9 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
+    // TODO: Create array of Video Players?
+    private var videoPlayer = AVPlayer()
+    
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -19,23 +22,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set the view's delegate
         sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
+        let configuration = ARImageTrackingConfiguration()
 
+        if let trackingImages = ARReferenceImage.referenceImages(inGroupNamed: "PaperImages", bundle: Bundle.main) {
+            configuration.trackingImages = trackingImages
+            configuration.maximumNumberOfTrackedImages = 1
+        }
+        
         // Run the view's session
         sceneView.session.run(configuration)
     }
@@ -45,31 +44,89 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
+    
+        NotificationCenter.default.removeObserver(self)
     }
 
     // MARK: - ARSCNViewDelegate
-    
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
-    }
-*/
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
         
+        let nodeForAnchor = SCNNode()
+        
+        if let imageAnchor = anchor as? ARImageAnchor,
+            let resourceName = imageAnchor.referenceImage.name {
+
+            videoPlayer.pause()
+            
+            let videoScene = SKScene(size: CGSize(width: 640, height: 360))
+            
+            let videoNode: SKVideoNode? = {
+                guard let urlString = Bundle.main.path(forResource: resourceName, ofType: "mp4") else { return nil }
+                let url = URL(fileURLWithPath: urlString)
+                let item = AVPlayerItem(url: url)
+                videoPlayer = AVPlayer(playerItem: item)
+                return SKVideoNode(avPlayer: videoPlayer)
+            }()
+            
+            NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: videoPlayer.currentItem, queue: nil) { _ in
+                self.videoPlayer.seek(to: CMTime.zero)
+                // self.videoPlayer.play()   // Uncomment this for infinite playing
+            }
+            
+            videoNode?.position = CGPoint(x: videoScene.size.width / 2, y: videoScene.size.height / 2)
+            videoNode?.yScale = -1.0
+            videoScene.addChild(videoNode!)
+            
+            videoPlayer.volume = 1.0
+            videoPlayer.play()
+            
+            let imagePlane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
+            imagePlane.firstMaterial?.diffuse.contents = videoScene
+            
+            let imageNode = SCNNode(geometry: imagePlane)
+            imageNode.eulerAngles.x = -.pi/2.0
+            
+            nodeForAnchor.name = resourceName
+            nodeForAnchor.addChildNode(imageNode)
+        }
+        
+        return nodeForAnchor
     }
     
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
+    // Try to manage multiple video players by stopping all the others but the one focused in front of the camera.
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         
+        for cNode1 in sceneView.scene.rootNode.childNodes {
+            
+            for cNode2 in cNode1.childNodes {
+                
+                if let videoScene = cNode2.geometry?.firstMaterial?.diffuse.contents as? SKScene {
+                    
+                    for cNode3 in videoScene.children {
+                        
+                        if let videoNode = cNode3 as? SKVideoNode {
+                            
+                            if cNode1.name == node.name {
+                                
+                                if videoNode.isPaused {
+                                    
+                                    // TODO: access array of video player to seek playback time to CMTime.zero
+                                    DispatchQueue.main.async {
+                                        videoNode.play()
+                                    }
+                                }
+                                
+                            } else if !videoNode.isPaused {
+                                
+                                DispatchQueue.main.async {
+                                    videoNode.pause()
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
-    }
 }
