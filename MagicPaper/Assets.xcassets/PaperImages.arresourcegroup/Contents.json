@@ -1,0 +1,44 @@
+{
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "resources" : [
+    {
+      "filename" : "adega.arreferenceimage"
+    },
+    {
+      "filename" : "brinde-elas.arreferenceimage"
+    },
+    {
+      "filename" : "brinde-vida.arreferenceimage"
+    },
+    {
+      "filename" : "celulari.arreferenceimage"
+    },
+    {
+      "filename" : "cortella.arreferenceimage"
+    },
+    {
+      "filename" : "espumante.arreferenceimage"
+    },
+    {
+      "filename" : "harrypotter.arreferenceimage"
+    },
+    {
+      "filename" : "macarrao.arreferenceimage"
+    },
+    {
+      "filename" : "nenes.arreferenceimage"
+    },
+    {
+      "filename" : "quadro-rolha.arreferenceimage"
+    },
+    {
+      "filename" : "unboxing.arreferenceimage"
+    },
+    {
+      "filename" : "wine.arreferenceimage"
+    }
+  ]
+}

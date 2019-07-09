@@ -13,6 +13,18 @@
 		7B6BFACE22CF8FE900DA3602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFACC22CF8FE900DA3602 /* Main.storyboard */; };
 		7B6BFAD022CF8FEA00DA3602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFACF22CF8FEA00DA3602 /* Assets.xcassets */; };
 		7B6BFAD322CF8FEA00DA3602 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFAD122CF8FEA00DA3602 /* LaunchScreen.storyboard */; };
+		7B6BFADB22CF925C00DA3602 /* harrypotter.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFADA22CF925C00DA3602 /* harrypotter.mp4 */; };
+		7B6BFAE722CFDEBA00DA3602 /* brinde-vida.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFADC22CFDEB800DA3602 /* brinde-vida.mp4 */; };
+		7B6BFAE822CFDEBA00DA3602 /* adega.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFADD22CFDEB900DA3602 /* adega.mp4 */; };
+		7B6BFAE922CFDEBA00DA3602 /* wine.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFADE22CFDEB900DA3602 /* wine.mp4 */; };
+		7B6BFAEA22CFDEBA00DA3602 /* cortella.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFADF22CFDEB900DA3602 /* cortella.mp4 */; };
+		7B6BFAEB22CFDEBA00DA3602 /* macarrao.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFAE022CFDEB900DA3602 /* macarrao.mp4 */; };
+		7B6BFAEC22CFDEBA00DA3602 /* brinde-elas.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFAE122CFDEB900DA3602 /* brinde-elas.mp4 */; };
+		7B6BFAEE22CFDEBA00DA3602 /* espumante.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFAE322CFDEB900DA3602 /* espumante.mp4 */; };
+		7B6BFAEF22CFDEBA00DA3602 /* quadro-rolha.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFAE422CFDEB900DA3602 /* quadro-rolha.mp4 */; };
+		7B6BFAF022CFDEBA00DA3602 /* celulari.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFAE522CFDEBA00DA3602 /* celulari.mp4 */; };
+		7B6BFAF122CFDEBA00DA3602 /* unboxing.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFAE622CFDEBA00DA3602 /* unboxing.mp4 */; };
+		7B6BFAF322CFE28600DA3602 /* nenes.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B6BFAF222CFE28600DA3602 /* nenes.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		7B6BFACF22CF8FEA00DA3602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B6BFAD222CF8FEA00DA3602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B6BFAD422CF8FEA00DA3602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B6BFADA22CF925C00DA3602 /* harrypotter.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = harrypotter.mp4; sourceTree = "<group>"; };
+		7B6BFADC22CFDEB800DA3602 /* brinde-vida.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "brinde-vida.mp4"; sourceTree = "<group>"; };
+		7B6BFADD22CFDEB900DA3602 /* adega.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = adega.mp4; sourceTree = "<group>"; };
+		7B6BFADE22CFDEB900DA3602 /* wine.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = wine.mp4; sourceTree = "<group>"; };
+		7B6BFADF22CFDEB900DA3602 /* cortella.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cortella.mp4; sourceTree = "<group>"; };
+		7B6BFAE022CFDEB900DA3602 /* macarrao.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = macarrao.mp4; sourceTree = "<group>"; };
+		7B6BFAE122CFDEB900DA3602 /* brinde-elas.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "brinde-elas.mp4"; sourceTree = "<group>"; };
+		7B6BFAE322CFDEB900DA3602 /* espumante.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = espumante.mp4; sourceTree = "<group>"; };
+		7B6BFAE422CFDEB900DA3602 /* quadro-rolha.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "quadro-rolha.mp4"; sourceTree = "<group>"; };
+		7B6BFAE522CFDEBA00DA3602 /* celulari.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = celulari.mp4; sourceTree = "<group>"; };
+		7B6BFAE622CFDEBA00DA3602 /* unboxing.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = unboxing.mp4; sourceTree = "<group>"; };
+		7B6BFAF222CFE28600DA3602 /* nenes.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nenes.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,18 @@
 		7B6BFAC522CF8FE900DA3602 /* MagicPaper */ = {
 			isa = PBXGroup;
 			children = (
+				7B6BFADA22CF925C00DA3602 /* harrypotter.mp4 */,
+				7B6BFADD22CFDEB900DA3602 /* adega.mp4 */,
+				7B6BFAE122CFDEB900DA3602 /* brinde-elas.mp4 */,
+				7B6BFADC22CFDEB800DA3602 /* brinde-vida.mp4 */,
+				7B6BFAE522CFDEBA00DA3602 /* celulari.mp4 */,
+				7B6BFADF22CFDEB900DA3602 /* cortella.mp4 */,
+				7B6BFAE322CFDEB900DA3602 /* espumante.mp4 */,
+				7B6BFAE022CFDEB900DA3602 /* macarrao.mp4 */,
+				7B6BFAF222CFE28600DA3602 /* nenes.mp4 */,
+				7B6BFAE422CFDEB900DA3602 /* quadro-rolha.mp4 */,
+				7B6BFAE622CFDEBA00DA3602 /* unboxing.mp4 */,
+				7B6BFADE22CFDEB900DA3602 /* wine.mp4 */,
 				7B6BFAC622CF8FE900DA3602 /* AppDelegate.swift */,
 				7B6BFAC822CF8FE900DA3602 /* art.scnassets */,
 				7B6BFACA22CF8FE900DA3602 /* ViewController.swift */,
@@ -126,9 +162,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6BFAC922CF8FE900DA3602 /* art.scnassets in Resources */,
+				7B6BFAF322CFE28600DA3602 /* nenes.mp4 in Resources */,
+				7B6BFAEC22CFDEBA00DA3602 /* brinde-elas.mp4 in Resources */,
+				7B6BFAEF22CFDEBA00DA3602 /* quadro-rolha.mp4 in Resources */,
+				7B6BFAEE22CFDEBA00DA3602 /* espumante.mp4 in Resources */,
 				7B6BFAD322CF8FEA00DA3602 /* LaunchScreen.storyboard in Resources */,
+				7B6BFAF122CFDEBA00DA3602 /* unboxing.mp4 in Resources */,
+				7B6BFAEA22CFDEBA00DA3602 /* cortella.mp4 in Resources */,
+				7B6BFAE922CFDEBA00DA3602 /* wine.mp4 in Resources */,
+				7B6BFADB22CF925C00DA3602 /* harrypotter.mp4 in Resources */,
+				7B6BFAF022CFDEBA00DA3602 /* celulari.mp4 in Resources */,
 				7B6BFAD022CF8FEA00DA3602 /* Assets.xcassets in Resources */,
 				7B6BFACE22CF8FE900DA3602 /* Main.storyboard in Resources */,
+				7B6BFAE722CFDEBA00DA3602 /* brinde-vida.mp4 in Resources */,
+				7B6BFAE822CFDEBA00DA3602 /* adega.mp4 in Resources */,
+				7B6BFAEB22CFDEBA00DA3602 /* macarrao.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
